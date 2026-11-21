@@ -19,7 +19,7 @@
     {
       "@type": "Course",
       "name": "Islamic Foundations Program — Year 1: Foundations of faith",
-      "description": "In Year 1, students learn the foundational Islamic concepts they will build on in later years, establish a strong understanding of their Muslim identity, and begin Qur’an and Arabic studies.",
+      "description": "Students learn the foundational Islamic concepts they will build on in later years, establish a strong understanding of their Muslim identity, and begin Qur’an and Arabic studies.",
       "provider": {
         "@type": "Organization",
         "name": "Knowledge Is Light Foundation",
@@ -48,53 +48,50 @@
   ]
 }
 -->
-<section class="page-hero pattern">
+<section class="page-head">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/islamic-foundations-program/">Islamic Foundations Program</a></li><li aria-current="page">Year 1</li></ol></nav>
-    <h1>Year 1: Foundations of faith</h1>
-    <p>In Year 1, students learn the foundational Islamic concepts they will build on in later years, establish a strong understanding of their Muslim identity, and begin Qur’an and Arabic studies.</p>
-    <div class="btn-row on-dark">{{#if forms.year1}}<a class="btn btn-gold" href="{{forms.year1}}" rel="noopener">Apply for Year 1</a>{{else}}<a class="btn btn-gold" href="/enroll/">Enrollment options</a>{{/if}}</div>
+    <span class="kicker">Islamic Foundations Program, Year 1</span>
+    <h1>Foundations of faith</h1>
+    <p class="lead">Students learn the foundational Islamic concepts they will build on in later years, establish a strong understanding of their Muslim identity, and begin Qur’an and Arabic studies.</p>
+    <div class="actions">{{#if forms.year1}}<a class="btn btn-primary" href="{{forms.year1}}" rel="noopener">Apply for Year 1</a>{{else}}<a class="btn btn-primary" href="mailto:{{teacher_email}}?subject=Year%201%20enrollment">Email to enroll</a>{{/if}}</div>
+    <nav class="year-tabs" aria-label="Program years"><a href="/islamic-foundations-program/year-1/" aria-current="page">Year 1</a><a href="/islamic-foundations-program/year-2/">Year 2</a><a href="/islamic-foundations-program/year-3/">Year 3</a><a href="/islamic-foundations-program/year-4/">Year 4</a></nav>
   </div>
 </section>
 
-<section class="section-tight">
-  <div class="wrap"><nav class="year-nav" aria-label="Program years"><a href="/islamic-foundations-program/year-1/" aria-current="page">Year 1</a><a href="/islamic-foundations-program/year-2/">Year 2</a><a href="/islamic-foundations-program/year-3/">Year 3</a><a href="/islamic-foundations-program/year-4/">Year 4</a></nav></div>
-</section>
-
-<section class="section" style="padding-top:0">
+<section class="section">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Year 1 subjects</span>
+      <span class="kicker">Year 1 subjects</span>
       <h2>What you’ll study</h2>
-      <div class="ornament"></div>
     </div>
-    <div class="subjects">
-      <div class="subject"><h3>Qur’an</h3><p>Students are placed in a Beginner, Intermediate, or Advanced Qur’an section based on their skill level.</p></div>
-      <div class="subject"><h3>‘Aqeedah</h3><p>The beliefs a Muslim must hold in the heart with conviction — Allah, His Angels, His Books, and the Last Day.</p></div>
-      <div class="subject"><h3>Introductory Fiqh</h3><p>The first concepts of Islamic law: how to purify oneself (Tahaarah), how to pray salah, and how to fast in Ramadan.</p></div>
-      <div class="subject"><h3>Seerah</h3><p>The biography of the Prophet Muhammad (SAW), from his birth until his passing.</p></div>
-      <div class="subject"><h3>Adab &amp; Akhlaaq</h3><p>Islamic manners, and hadith related to developing good character.</p></div>
-      <div class="subject"><h3>Taarikh</h3><p>The stories of the 25 prophets mentioned in the Qur’an.</p></div>
-    </div>
+    <ul class="subject-list">
+      <li><h3>Qur’an</h3><p>Students are placed in a Beginner, Intermediate or Advanced Qur’an section based on their skill level.</p></li>
+      <li><h3>‘Aqeedah</h3><p>The beliefs a Muslim holds in the heart with conviction: Allah, His Angels, His Books and the Last Day.</p></li>
+      <li><h3>Introductory Fiqh</h3><p>The first concepts of Islamic law: how to purify oneself (Tahaarah), how to pray salah, and how to fast in Ramadan.</p></li>
+      <li><h3>Seerah</h3><p>The biography of the Prophet Muhammad (SAW), from his birth until his passing.</p></li>
+      <li><h3>Adab and Akhlaaq</h3><p>Islamic manners, and hadith about developing good character.</p></li>
+      <li><h3>Taarikh</h3><p>The stories of the 25 prophets mentioned in the Qur’an.</p></li>
+    </ul>
   </div>
 </section>
 
-<section class="section section-cream">
+<section class="section section-raised">
   <div class="wrap">
     <div class="facts">
-      <div class="fact"><div class="label">Class times {{academic_year}}</div><div class="value">Mondays &amp; Wednesdays</div><p>6–8 PM Eastern Time, live online</p></div>
-      <div class="fact"><div class="label">Tuition</div><div class="value">$100 / month</div><p>$75 per student per month for families with more than one student enrolled.</p></div>
-      <div class="fact"><div class="label">Payment</div><div class="value">Via PayPal</div><p>Pay on our <a href="/tuition/">tuition page</a>. Questions? <a href="mailto:{{teacher_email}}">Email us</a>.</p></div>
+      <div class="fact"><div class="label">Class times, {{academic_year}}</div><div class="value">Mondays and Wednesdays</div><p>6–8 PM Eastern, live online</p></div>
+      <div class="fact"><div class="label">Tuition</div><div class="value">$100 a month</div><p>$75 per student for families with two or more enrolled</p></div>
+      <div class="fact"><div class="label">Payment</div><div class="value">Through PayPal</div><p>See the <a href="/tuition/">tuition page</a> or <a href="mailto:{{teacher_email}}">email us</a> with questions</p></div>
     </div>
   </div>
 </section>
 
-<section class="cta-band pattern">
-  <div class="wrap">
+<section class="closing on-dark">
+  <div class="wrap closing-grid">
     <div>
+      <span class="kicker">Open to women and girls 13 and up</span>
       <h2>Join Year 1 for {{academic_year}}</h2>
-      <p>Open to women and girls ages 13 and up. Classes begin in August, inshaAllah.</p>
     </div>
-    <div class="btn-row on-dark">{{#if forms.year1}}<a class="btn btn-gold" href="{{forms.year1}}" rel="noopener">Apply for Year 1</a>{{else}}<a class="btn btn-gold" href="/enroll/">Enrollment options</a>{{/if}}<a class="btn btn-ghost" href="/islamic-foundations-program/">Program overview</a></div>
+    <div class="actions">{{#if forms.year1}}<a class="btn btn-primary" href="{{forms.year1}}" rel="noopener">Apply for Year 1</a>{{else}}<a class="btn btn-primary" href="mailto:{{teacher_email}}?subject=Year%201%20enrollment">Email to enroll</a>{{/if}}<a class="btn btn-secondary" href="/islamic-foundations-program/">Program overview</a></div>
   </div>
 </section>

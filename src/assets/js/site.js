@@ -1,25 +1,25 @@
 // Mobile navigation
 (function () {
   var toggle = document.querySelector('.nav-toggle');
-  if (toggle) {
-    toggle.addEventListener('click', function () {
-      var open = document.body.classList.toggle('nav-open');
-      toggle.setAttribute('aria-expanded', String(open));
-    });
+  if (!toggle) return;
+  function setOpen(open) {
+    document.body.classList.toggle('nav-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
   }
-  document.querySelectorAll('.sub-toggle').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var sub = btn.parentElement.querySelector('.sub');
-      var open = sub.classList.toggle('open');
-      btn.setAttribute('aria-expanded', String(open));
-    });
+  toggle.addEventListener('click', function () {
+    setOpen(!document.body.classList.contains('nav-open'));
+  });
+  document.querySelectorAll('#site-nav a').forEach(function (a) {
+    a.addEventListener('click', function () { setOpen(false); });
   });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && document.body.classList.contains('nav-open')) {
-      document.body.classList.remove('nav-open');
-      toggle.setAttribute('aria-expanded', 'false');
+      setOpen(false);
       toggle.focus();
     }
+  });
+  window.matchMedia('(min-width: 961px)').addEventListener('change', function (m) {
+    if (m.matches) setOpen(false);
   });
 })();
 
@@ -59,7 +59,7 @@
         if (!res.success) throw new Error(res.message);
         form.reset();
         status.className = 'form-status ok';
-        status.textContent = 'JazakAllahu khayran! Your message has been sent — we’ll be in touch soon, inshaAllah.';
+        status.textContent = 'JazakAllahu khayran. Your message has been sent, and we’ll be in touch soon, inshaAllah.';
       })
       .catch(function () {
         status.className = 'form-status err';

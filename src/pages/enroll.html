@@ -8,64 +8,59 @@
   "breadcrumbs": [["Enroll", "/enroll/"]]
 }
 -->
-<section class="page-hero pattern">
+<section class="page-head">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Enroll</li></ol></nav>
     <h1>Enroll for {{academic_year}}</h1>
-    <p>Enrollment is open for the {{academic_year}} academic year. Choose the year you’d like to apply for below.</p>
+    <p class="lead">Enrollment is open for the Islamic Foundations Program. Choose the year you’re applying for.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <div class="enroll-grid">
-      <div class="card enroll-card">
-        <div class="card-num">Year 1</div>
-        <h3>New students</h3>
-        <p>Start here if you’re new to the program.</p>
-        <div class="btn-row">{{#if forms.year1}}<a class="btn btn-gold" href="{{forms.year1}}" rel="noopener">Year 1 application</a>{{else}}<a class="btn btn-ghost" href="/contact/">Contact us</a>{{/if}}</div>
-      </div>
-      <div class="card enroll-card">
-        <div class="card-num">Year 2</div>
-        <h3>Tafseer &amp; Hadith</h3>
-        <p>For students who have completed Year 1.</p>
-        <div class="btn-row">{{#if forms.year2}}<a class="btn btn-gold" href="{{forms.year2}}" rel="noopener">Year 2 application</a>{{else}}<a class="btn btn-ghost" href="/contact/">Contact us</a>{{/if}}</div>
-      </div>
-      <div class="card enroll-card">
-        <div class="card-num">Year 3</div>
-        <h3>Arabic &amp; classical texts</h3>
-        <p>For students who have completed Year 2.</p>
-        <div class="btn-row">{{#if forms.year3}}<a class="btn btn-gold" href="{{forms.year3}}" rel="noopener">Year 3 application</a>{{else}}<a class="btn btn-ghost" href="/contact/">Contact us</a>{{/if}}</div>
-      </div>
-      <div class="card enroll-card">
-        <div class="card-num">Year 4</div>
-        <h3>Advanced study</h3>
-        <p>For students who have completed Year 3.</p>
-        <div class="btn-row">{{#if forms.year4}}<a class="btn btn-gold" href="{{forms.year4}}" rel="noopener">Year 4 application</a>{{else}}<a class="btn btn-ghost" href="mailto:{{teacher_email}}?subject=Year%204%20enrollment">Email to enroll</a>{{/if}}</div>
-      </div>
-    </div>
+    <ul class="enroll-rows">
+      <li>
+        <span class="year">{{arch_mark}}Year 1</span>
+        <p><strong>Foundations of faith</strong>New students start here</p>
+        <div>{{#if forms.year1}}<a class="btn btn-primary" href="{{forms.year1}}" rel="noopener">Year 1 application</a>{{else}}<a class="btn btn-secondary" href="/contact/">Contact us</a>{{/if}}</div>
+      </li>
+      <li>
+        <span class="year">{{arch_mark}}Year 2</span>
+        <p><strong>Tafseer and Hadith</strong>After completing Year 1</p>
+        <div>{{#if forms.year2}}<a class="btn btn-primary" href="{{forms.year2}}" rel="noopener">Year 2 application</a>{{else}}<a class="btn btn-secondary" href="/contact/">Contact us</a>{{/if}}</div>
+      </li>
+      <li>
+        <span class="year">{{arch_mark}}Year 3</span>
+        <p><strong>Arabic and classical texts</strong>After completing Year 2</p>
+        <div>{{#if forms.year3}}<a class="btn btn-primary" href="{{forms.year3}}" rel="noopener">Year 3 application</a>{{else}}<a class="btn btn-secondary" href="/contact/">Contact us</a>{{/if}}</div>
+      </li>
+      <li>
+        <span class="year">{{arch_mark}}Year 4</span>
+        <p><strong>Advanced study</strong>After completing Year 3</p>
+        <div>{{#if forms.year4}}<a class="btn btn-primary" href="{{forms.year4}}" rel="noopener">Year 4 application</a>{{else}}<a class="btn btn-secondary" href="mailto:{{teacher_email}}?subject=Year%204%20enrollment">Email to enroll</a>{{/if}}</div>
+      </li>
+    </ul>
   </div>
 </section>
 
-<section class="section section-cream">
+<section class="section section-raised">
   <div class="wrap split top">
     <div>
-      <span class="eyebrow">Before you apply</span>
+      <span class="kicker">Before you apply</span>
       <h2>What to expect</h2>
-      <div class="ornament"></div>
-      <ul class="checklist">
-        <li>Open to women and girls <strong>13 years of age or older</strong>. For younger students, email <a href="mailto:{{teacher_email}}">{{teacher_email}}</a>.</li>
-        <li>Classes follow the school year: <strong>August through June</strong>.</li>
-        <li>Classes are <strong>live and online</strong>, two evenings a week, 6–8 PM Eastern.</li>
-        <li>Attendance is recorded and students complete assignments and tests.</li>
-        <li>A <strong>listen-only option</strong> is available if you can’t commit to the coursework.</li>
+      <ul class="ruled plain">
+        <li>Open to women and girls 13 and older. For younger students, email <a href="mailto:{{teacher_email}}">{{teacher_email}}</a></li>
+        <li>Classes follow the school year, August through June</li>
+        <li>Live online classes, two evenings a week, 6–8 PM Eastern</li>
+        <li>Attendance is recorded, with assignments and tests</li>
+        <li>A listen-only option if you can’t commit to the coursework</li>
       </ul>
     </div>
-    <div class="card">
-      <h3>Tuition</h3>
-      <p><strong style="font-family:var(--serif);font-size:1.6rem;color:var(--ink)">$100</strong> per month</p>
-      <p>Families with more than one student enrolled pay <strong>$75 per student per month</strong>. Tuition is collected through PayPal.</p>
-      <div class="btn-row"><a class="btn btn-ink" href="/tuition/">Tuition &amp; payment</a></div>
+    <div class="panel">
+      <span class="kicker">Tuition</span>
+      <p class="price">$100<span>a month</span></p>
+      <p style="margin-top:16px;color:var(--text-2)">Families with two or more students enrolled pay $75 per student a month. Tuition is collected through PayPal.</p>
+      <div class="actions" style="margin-top:24px"><a class="btn btn-secondary" href="/tuition/">Tuition and payment</a></div>
     </div>
   </div>
 </section>

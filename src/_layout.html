@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{{page_title}}</title>
 <meta name="description" content="{{page_description}}">
 <meta name="robots" content="{{robots}}">
 <link rel="canonical" href="{{canonical}}">
-<meta name="theme-color" content="#0f4c4a">
+<meta name="theme-color" content="#f7f3ea">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{{site_name}}">
@@ -24,8 +24,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400&family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v={{css_v}}">
 {{json_ld}}
 </head>
 <body class="{{body_class}}">
@@ -33,19 +33,19 @@
 
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="/" aria-label="{{site_name}} — home">
-      <img src="/assets/img/logo-160.webp" width="52" height="52" alt="">
-      <span class="brand-text"><span class="brand-name">Knowledge Is Light</span><span class="brand-sub">Foundation</span></span>
+    <a class="brand" href="/" aria-label="{{site_name}}, home">
+      <img src="/assets/img/logo-160.webp" width="44" height="44" alt="">
+      <span class="brand-name">Knowledge Is Light<span>Foundation</span></span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
-      <span class="sr-only">Menu</span><span class="bars" aria-hidden="true"></span>
+      <span class="sr-only">Menu</span><i></i><i></i>
     </button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
       <ul>
         <li><a href="/about/" {{nav:about}}>About</a></li>
         <li class="has-sub">
           <a href="/islamic-foundations-program/" {{nav:programs}}>Programs</a>
-          <button class="sub-toggle" aria-expanded="false" aria-label="Show program pages"><span aria-hidden="true"></span></button>
+          <span class="nav-group-label">Programs</span>
           <ul class="sub">
             <li><a href="/islamic-foundations-program/">Islamic Foundations Program</a></li>
             <li><a href="/islamic-foundations-program/year-1/">Year 1</a></li>
@@ -58,7 +58,7 @@
         </li>
         <li><a href="/tuition/" {{nav:tuition}}>Tuition</a></li>
         <li><a href="/contact/" {{nav:contact}}>Contact</a></li>
-        <li class="nav-cta"><a class="btn btn-gold" href="/enroll/" {{nav:enroll}}>Enroll</a></li>
+        <li class="nav-cta"><a href="/enroll/" {{nav:enroll}}>Enroll</a></li>
       </ul>
     </nav>
   </div>
@@ -69,15 +69,14 @@
 </main>
 
 <footer class="site-footer">
-  <div class="pattern-band" aria-hidden="true"></div>
   <div class="wrap footer-grid">
     <div class="footer-about">
-      <a class="brand brand-light" href="/">
-        <img src="/assets/img/logo-160.webp" width="52" height="52" alt="" loading="lazy">
-        <span class="brand-text"><span class="brand-name">Knowledge Is Light</span><span class="brand-sub">Foundation</span></span>
+      <a class="brand" href="/">
+        <img src="/assets/img/logo-160.webp" width="44" height="44" alt="" loading="lazy">
+        <span class="brand-name">Knowledge Is Light<span>Foundation</span></span>
       </a>
-      <p>Online Quran and Islamic Studies for Muslim women and girls — taught live by qualified ‘Alimaat.</p>
-      <p class="small">Knowledge Is Light Foundation is a Florida 501(c)(3) nonprofit organization, incorporated in 2023. Our founders have served this mission since 2018.</p>
+      <p>Live online Qur’an and Islamic Studies for Muslim women and girls, taught by qualified ‘Alimaat.</p>
+      <p>A Florida 501(c)(3) nonprofit, incorporated in 2023. Our founders have served this mission since 2018.</p>
     </div>
     <div>
       <h2 class="footer-h">Programs</h2>
@@ -86,7 +85,7 @@
         <li><a href="/sisters-circles/">Sisters’ Circles</a></li>
         <li><a href="/community-programs/">Community Programs</a></li>
         <li><a href="/enroll/">Enroll</a></li>
-        <li><a href="/tuition/">Pay Tuition</a></li>
+        <li><a href="/tuition/">Pay tuition</a></li>
       </ul>
     </div>
     <div>
@@ -99,12 +98,9 @@
       </ul>
     </div>
   </div>
-  <div class="wrap footer-base">
-    <p lang="ar" dir="rtl" class="arabic">وَقُل رَّبِّ زِدْنِي عِلْمًا</p>
-    <p class="small">© {{year}} Knowledge Is Light Foundation. All rights reserved.</p>
-  </div>
+  <div class="wrap footer-base">© {{year}} Knowledge Is Light Foundation</div>
 </footer>
 
-<script src="/assets/js/site.js" defer></script>
+<script src="/assets/js/site.js?v={{js_v}}" defer></script>
 </body>
 </html>

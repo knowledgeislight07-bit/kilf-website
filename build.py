@@ -33,6 +33,14 @@ IF_RE = re.compile(r"\{\{#if ([\w.]+)\}\}(.*?)(?:\{\{else\}\}(.*?))?\{\{/if\}\}"
 VAR_RE = re.compile(r"\{\{([\w.]+)\}\}")
 NAV_RE = re.compile(r"\{\{nav:(\w+)\}\}")
 
+# The site's signature: a pointed (mihrab) arch drawn as one gold hairline.
+# {{arch_line}} frames an arch image; {{arch_mark}} is the small inline mark.
+ARCH_PATH = "M0 500V196C0 104 92 44 200 0c108 44 200 104 200 196v304"
+ARCH_LINE = ('<svg class="arch-line" viewBox="0 0 400 500" preserveAspectRatio="none" aria-hidden="true">'
+             f'<path d="{ARCH_PATH}"/></svg>')
+ARCH_MARK = ('<svg class="arch-mark" viewBox="0 0 14 18" aria-hidden="true">'
+             '<path d="M1 17.5V7.4C1 4.3 4 2.2 7 .8c3 1.4 6 3.5 6 6.6v10.1"/></svg>')
+
 
 def lookup(ctx, key):
     cur = ctx
@@ -58,6 +66,12 @@ def render(text, ctx):
         return str(val)
 
     return VAR_RE.sub(var, text)
+
+
+def asset_hash(rel):
+    """Short content hash so browsers re-download CSS/JS whenever they change."""
+    import hashlib
+    return hashlib.sha1((SRC / rel).read_bytes()).hexdigest()[:8]
 
 
 def breadcrumb_ld(site, crumbs):
@@ -136,6 +150,8 @@ def main():
 
         ctx = dict(site)
         ctx.update(meta)
+        ctx["arch_line"] = ARCH_LINE
+        ctx["arch_mark"] = ARCH_MARK
         ctx["today"] = date.today().isoformat()
         ctx["year"] = date.today().year
 
@@ -165,6 +181,8 @@ def main():
         )
         ctx["body_class"] = meta.get("body_class", "")
 
+        ctx["css_v"] = asset_hash("assets/css/site.css")
+        ctx["js_v"] = asset_hash("assets/js/site.js")
         html = NAV_RE.sub(lambda m2: 'aria-current="page"' if meta.get("nav") == m2.group(1) else "", layout)
         # render layout; content is already rendered, protect it from a second pass
         html = html.replace("{{content}}", "\x00CONTENT\x00")

@@ -8,34 +8,31 @@
   "breadcrumbs": [["Pay Tuition", "/tuition/"]]
 }
 -->
-<section class="page-hero pattern">
+<section class="page-head">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Pay Tuition</li></ol></nav>
-    <h1>Pay Tuition</h1>
-    <p>Tuition is collected securely through PayPal.</p>
+    <h1>Pay tuition</h1>
+    <p class="lead">Tuition for the Islamic Foundations Program is collected securely through PayPal.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap split top">
     <div>
-      <span class="eyebrow">Islamic Foundations Program</span>
       <h2>Tuition rates</h2>
-      <div class="ornament"></div>
-      <div class="facts" style="margin-bottom:24px">
-        <div class="fact"><div class="label">One student</div><div class="value">$100 / month</div></div>
-        <div class="fact"><div class="label">Two or more students</div><div class="value">$75 / student / month</div></div>
+      <div class="facts" style="margin:32px 0">
+        <div class="fact"><div class="label">One student</div><div class="value">$100 a month</div></div>
+        <div class="fact"><div class="label">Two or more students</div><div class="value">$75 per student a month</div></div>
       </div>
-      <p>Questions or concerns about tuition? Please email <a href="mailto:{{teacher_email}}">{{teacher_email}}</a> — we’re happy to help.</p>
+      <p>Questions about tuition? Email <a href="mailto:{{teacher_email}}">{{teacher_email}}</a> and we’ll be glad to help.</p>
     </div>
-    <div class="card" style="text-align:center">
+    <div class="panel">
       <h3>Pay with PayPal</h3>
-      <p>Click below to pay. You can use your PayPal account or a debit/credit card.</p>
       {{#if paypal_url}}
-      <div class="btn-row" style="justify-content:center"><a class="btn btn-gold" href="{{paypal_url}}" rel="noopener">Pay tuition with PayPal</a></div>
-      <p class="small" style="margin-top:14px">Please include the student’s name in the payment note.</p>
+      <p style="color:var(--text-2)">Use your PayPal account or a debit or credit card. Please include the student’s name in the payment note.</p>
+      <div class="actions" style="margin-top:24px"><a class="btn btn-primary" href="{{paypal_url}}" rel="noopener">Pay tuition with PayPal</a></div>
       {{else}}
-      <div class="notice" style="text-align:left"><p>Online payment is being set up. In the meantime, please email <a href="mailto:{{teacher_email}}?subject=Tuition%20payment">{{teacher_email}}</a> and we’ll send you a payment link.</p></div>
+      <p style="color:var(--text-2)">Online payment is being set up. In the meantime, email <a href="mailto:{{teacher_email}}?subject=Tuition%20payment">{{teacher_email}}</a> and we’ll send you a payment link.</p>
       {{/if}}
     </div>
   </div>

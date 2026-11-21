@@ -54,4 +54,4 @@ Her ranking comes mainly from the **domain name**, its age, and the links pointi
 6. **Google Business Profile** (free) for "Knowledge Is Light Foundation" strongly helps branded and local searches.
 
 ## Image licensing note
-The Wix site's geometric backgrounds and illustrations are **Adobe Stock images licensed through Wix**. That license generally covers use only on a Wix site, so they were deliberately **not** reused here. This site uses the foundation's own logo and flyers, Unsplash photos (free license), and an original geometric pattern (`src/assets/img/pattern.svg`).
+The Wix site's geometric backgrounds and illustrations are **Adobe Stock images licensed through Wix**. That license generally covers use only on a Wix site, so they were deliberately **not** reused here. This site uses the foundation's own logo and flyers, Unsplash photos (free license), and an original arch shape drawn in code (`src/assets/img/arch.svg`).

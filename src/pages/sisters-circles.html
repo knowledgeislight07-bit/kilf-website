@@ -18,47 +18,45 @@
   }]
 }
 -->
-<section class="page-hero pattern">
+<section class="page-head">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Sisters’ Circles</li></ol></nav>
+    <span class="kicker">Free · On Zoom · Led by ‘Alimaat</span>
     <h1>Online Sisters’ Circles</h1>
-    <p>A gathering of faith, reflection, and sisterhood — a space to learn, reflect, and grow together.</p>
+    <p class="lead">A gathering of faith, reflection and sisterhood, and a space to learn, reflect and grow together.</p>
+    <div class="actions">
+      {{#if forms.sisters_circle}}<a class="btn btn-primary" href="{{forms.sisters_circle}}" rel="noopener">Register for the Zoom link</a>{{/if}}
+      <a class="btn btn-secondary" href="sms:{{phone_e164}}">Text {{phone}}</a>
+    </div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap split top">
     <div>
-      <span class="eyebrow">Free · On Zoom · Led by ‘Alimaat</span>
-      <h2>A space to learn, reflect, and grow together</h2>
-      <div class="ornament"></div>
-      <p>Our Online Sisters’ Circles provide a welcoming, supportive space for Muslim women to come together, strengthen their connection with Allah, and have meaningful conversations about faith and everyday life.</p>
-      <p>Through interactive sessions led by our ‘Alimaat (female Islamic scholars), we explore Islamic teachings, reflect on the Qur’an and Sunnah, and discuss topics relevant to the spiritual and personal growth of Muslim women.</p>
-      <ul class="checklist">
-        <li>Enriching discussion topics and reflections</li>
+      <h2>A space to learn, reflect and grow together</h2>
+      <p>Our Online Sisters’ Circles give Muslim women a welcoming, supportive place to come together, strengthen their connection with Allah, and talk about faith and everyday life.</p>
+      <p>In interactive sessions led by our ‘Alimaat, female Islamic scholars, we explore Islamic teachings, reflect on the Qur’an and Sunnah, and discuss topics that matter to the spiritual and personal growth of Muslim women.</p>
+      <ul class="ruled plain" style="margin-top:32px">
+        <li>Discussion topics and reflections chosen for sisters</li>
         <li>Support and sisterhood from women on the same path</li>
-        <li>Strengthen your connection with Allah (SWT)</li>
-        <li><strong>No cost</strong> — just connection</li>
+        <li>A closer connection with Allah (SWT)</li>
+        <li>No cost, just connection</li>
       </ul>
-      <div class="btn-row">
-        {{#if forms.sisters_circle}}<a class="btn btn-gold" href="{{forms.sisters_circle}}" rel="noopener">Register &amp; get the Zoom link</a>{{/if}}
-        <a class="btn btn-ghost" href="sms:{{phone_e164}}">Or text {{phone}}</a>
-      </div>
     </div>
     <figure class="flyer">
-      <img src="/assets/img/flyer-circles-1000.webp" width="1000" height="1250" alt="Sisters’ Circle flyer: Online Sisters’ Circle on Zoom — a gathering of faith, reflection, and sisterhood led by Alimaat. A complimentary gathering for sisters, no cost for the classes." loading="lazy">
+      <img src="/assets/img/flyer-circles-1000.webp" width="1000" height="1250" alt="Sisters’ Circle flyer: an online gathering on Zoom of faith, reflection and sisterhood led by ‘Alimaat, at no cost" loading="lazy">
     </figure>
   </div>
 </section>
 
-<section class="cta-band pattern">
-  <div class="wrap">
+<section class="closing on-dark">
+  <div class="wrap closing-grid">
     <div>
-      <h2>Looking for structured study?</h2>
-      <p>Our Islamic Foundations Program offers a full curriculum of Qur’an and Islamic Studies.</p>
+      <span class="kicker">Looking for structured study?</span>
+      <h2>The Islamic Foundations Program</h2>
+      <p>A full four-year curriculum in Qur’an and Islamic Studies.</p>
     </div>
-    <div class="btn-row on-dark">
-      <a class="btn btn-gold" href="/islamic-foundations-program/">See the program</a>
-    </div>
+    <div class="actions"><a class="btn btn-primary" href="/islamic-foundations-program/">See the program</a></div>
   </div>
 </section>
