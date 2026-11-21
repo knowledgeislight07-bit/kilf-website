@@ -1,0 +1,71 @@
+<!--meta
+{
+  "title": "Enroll for 2026–2027 | Knowledge Is Light Foundation",
+  "description": "Enrollment is open for the 2026–2027 academic year of the Islamic Foundations Program — online Quran and Islamic Studies for women and girls ages 13+.",
+  "path": "/enroll/",
+  "nav": "enroll",
+  "priority": "0.9",
+  "breadcrumbs": [["Enroll", "/enroll/"]]
+}
+-->
+<section class="page-hero pattern">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Enroll</li></ol></nav>
+    <h1>Enroll for {{academic_year}}</h1>
+    <p>Enrollment is open for the {{academic_year}} academic year. Choose the year you’d like to apply for below.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="enroll-grid">
+      <div class="card enroll-card">
+        <div class="card-num">Year 1</div>
+        <h3>New students</h3>
+        <p>Start here if you’re new to the program.</p>
+        <div class="btn-row">{{#if forms.year1}}<a class="btn btn-gold" href="{{forms.year1}}" rel="noopener">Year 1 application</a>{{else}}<a class="btn btn-ghost" href="/contact/">Contact us</a>{{/if}}</div>
+      </div>
+      <div class="card enroll-card">
+        <div class="card-num">Year 2</div>
+        <h3>Tafseer &amp; Hadith</h3>
+        <p>For students who have completed Year 1.</p>
+        <div class="btn-row">{{#if forms.year2}}<a class="btn btn-gold" href="{{forms.year2}}" rel="noopener">Year 2 application</a>{{else}}<a class="btn btn-ghost" href="/contact/">Contact us</a>{{/if}}</div>
+      </div>
+      <div class="card enroll-card">
+        <div class="card-num">Year 3</div>
+        <h3>Arabic &amp; classical texts</h3>
+        <p>For students who have completed Year 2.</p>
+        <div class="btn-row">{{#if forms.year3}}<a class="btn btn-gold" href="{{forms.year3}}" rel="noopener">Year 3 application</a>{{else}}<a class="btn btn-ghost" href="/contact/">Contact us</a>{{/if}}</div>
+      </div>
+      <div class="card enroll-card">
+        <div class="card-num">Year 4</div>
+        <h3>Advanced study</h3>
+        <p>For students who have completed Year 3.</p>
+        <div class="btn-row">{{#if forms.year4}}<a class="btn btn-gold" href="{{forms.year4}}" rel="noopener">Year 4 application</a>{{else}}<a class="btn btn-ghost" href="mailto:{{teacher_email}}?subject=Year%204%20enrollment">Email to enroll</a>{{/if}}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-cream">
+  <div class="wrap split top">
+    <div>
+      <span class="eyebrow">Before you apply</span>
+      <h2>What to expect</h2>
+      <div class="ornament"></div>
+      <ul class="checklist">
+        <li>Open to women and girls <strong>13 years of age or older</strong>. For younger students, email <a href="mailto:{{teacher_email}}">{{teacher_email}}</a>.</li>
+        <li>Classes follow the school year: <strong>August through June</strong>.</li>
+        <li>Classes are <strong>live and online</strong>, two evenings a week, 6–8 PM Eastern.</li>
+        <li>Attendance is recorded and students complete assignments and tests.</li>
+        <li>A <strong>listen-only option</strong> is available if you can’t commit to the coursework.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Tuition</h3>
+      <p><strong style="font-family:var(--serif);font-size:1.6rem;color:var(--ink)">$100</strong> per month</p>
+      <p>Families with more than one student enrolled pay <strong>$75 per student per month</strong>. Tuition is collected through PayPal.</p>
+      <div class="btn-row"><a class="btn btn-ink" href="/tuition/">Tuition &amp; payment</a></div>
+    </div>
+  </div>
+</section>

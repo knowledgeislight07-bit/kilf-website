@@ -1,0 +1,22 @@
+{
+  "site_url": "https://www.knowledgeislight.us",
+  "site_name": "Knowledge Is Light Foundation",
+  "short_name": "Knowledge Is Light",
+  "email": "knowledgeislight07@gmail.com",
+  "teacher_email": "sabrina@knowledgeislight.us",
+  "phone": "904-878-8293",
+  "phone_e164": "+19048788293",
+  "academic_year": "2026–2027",
+
+  "paypal_url": "",
+
+  "web3forms_key": "",
+
+  "forms": {
+    "year1": "https://forms.gle/DqSG23u9RVETeKTG7",
+    "year2": "https://forms.gle/nVnG5x6ugB6Jzb1v7",
+    "year3": "https://forms.gle/TqSVGvsXmB8rjaCa9",
+    "year4": "",
+    "sisters_circle": "https://forms.gle/DuLpJ8nhm78scP3c6"
+  }
+}

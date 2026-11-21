@@ -1,0 +1,16 @@
+# Permanent (301) redirects from the old Wix URLs so Google transfers their
+# rankings to the new pages and old links/bookmarks/flyers keep working.
+/copy-of-about-us     /about/                                301
+/general-7            /islamic-foundations-program/          301
+/general-7-1          /islamic-foundations-program/year-1/   301
+/copy-of-year-1       /islamic-foundations-program/year-2/   301
+/copy-of-year-2       /islamic-foundations-program/year-3/   301
+/copy-of-year-3       /islamic-foundations-program/year-4/   301
+/paytuition           /tuition/                              301
+/contactus            /contact/                              301
+/ramadan              /community-programs/                   301
+/members              /                                      301
+/about-us             /about/                                301
+/what-we-do           /islamic-foundations-program/          301
+/donate               /contact/                              301
+/home                 /                                      301
